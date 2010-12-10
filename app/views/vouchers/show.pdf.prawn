@@ -1,4 +1,4 @@
-prawn_document do |pdf|
+prawn_document(:force_download=>true) do |pdf|
   pdf.bounding_box([0,pdf.bounds.top], :width => 200, :height => 100) do
       pdf.image "#{Rails.public_path}/images/logo.png"
       pdf.text "Voucher ID: 123456"
